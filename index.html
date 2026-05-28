@@ -1,0 +1,203 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Assessment</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="topbar">Placement</header>
+
+    <main class="main-shell">
+      <section class="hero">
+        <div class="hero-slider" id="heroSlider">
+          <div class="hero-track">
+            <article class="hero-slide active">
+              <div class="hero-image">
+                <span class="dimension-text">1920x1080</span>
+              </div>
+            </article>
+
+            <article class="hero-slide">
+              <div class="hero-image">
+                <span class="dimension-text">1920x1080</span>
+              </div>
+            </article>
+
+            <article class="hero-slide">
+              <div class="hero-image">
+                <span class="dimension-text">1920x1080</span>
+              </div>
+            </article>
+
+            <article class="hero-slide">
+              <div class="hero-image">
+                <span class="dimension-text">1920x1080</span>
+              </div>
+            </article>
+
+            <article class="hero-slide">
+              <div class="hero-image">
+                <span class="dimension-text">1920x1080</span>
+              </div>
+            </article>
+          </div>
+
+          <button class="nav-arrow left" id="prevBtn">‹</button>
+          <button class="nav-arrow right" id="nextBtn">›</button>
+          <div class="dots" id="dots"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Eyebrow</p>
+          <h1>Welcome Developer!</h1>
+          <p class="hero-desc">
+            Your goal is to translate the provided Figma designs into a living, functional interface. We value pixel-perfection;
+            <br>your output should match the design specifications exactly in terms of colour, spacing, typography, and visual
+            hierarchy.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-light">Shop Now</button>
+            <button class="btn btn-outline">Discover All</button>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="heading-section">
+        <h2>Heading</h2>
+      </section>
+
+      <!-- Tabs/Accordion Section -->
+      <section class="tabs-section">
+        <div class="tabs-container">
+          <!-- Desktop Tabs -->
+          <div class="tabs-wrapper" role="tablist">
+            <button class="tab-button active" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1">Tab One</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2">Tab Two</button>
+            <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3">Tab Three</button>
+          </div>
+
+          <!-- Tab Panels -->
+          <div class="tab-panels">
+            <div class="tab-panel active" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-1">
+              <p>This is the content for Tab One. It contains information about the first tab.</p>
+            </div>
+            <div class="tab-panel" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-2">
+              <p>This is the content for Tab Two. It contains information about the second tab.</p>
+            </div>
+            <div class="tab-panel" id="tab-panel-3" role="tabpanel" aria-labelledby="tab-3">
+              <p>This is the content for Tab Three. It contains information about the third tab.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Accordion -->
+        <div class="accordion-wrapper">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="true" aria-controls="accordion-1">
+              Tab One
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content" id="accordion-1" role="region">
+              <p>This is the content for Tab One. It contains information about the first tab.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="accordion-2">
+              Tab Two
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content" id="accordion-2" role="region">
+              <p>This is the content for Tab Two. It contains information about the second tab.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="accordion-3">
+              Tab Three
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content" id="accordion-3" role="region">
+              <p>This is the content for Tab Three. It contains information about the third tab.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="products-section">
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image" role="img" aria-label="Product image">
+              <span class="dimension-text small">462x710</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p>Brand Name</p>
+                <h3>Heading</h3>
+              </div>
+              <div class="price">
+                <span>$80.95</span>
+                <del>$90.95</del>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image" role="img" aria-label="Product image">
+              <span class="dimension-text small">462x710</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p>Brand Name</p>
+                <h3>Heading</h3>
+              </div>
+              <div class="price">
+                <span>$80.95</span>
+                <del>$90.95</del>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image" role="img" aria-label="Product image">
+              <span class="dimension-text small">462x710</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p>Brand Name</p>
+                <h3>Heading</h3>
+              </div>
+              <div class="price">
+                <span>$80.95</span>
+                <del>$90.95</del>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image" role="img" aria-label="Product image">
+              <span class="dimension-text small">462x710</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p>Brand Name</p>
+                <h3>Heading</h3>
+              </div>
+              <div class="price">
+                <span>$80.95</span>
+                <del>$90.95</del>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
