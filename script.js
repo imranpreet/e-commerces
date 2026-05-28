@@ -56,31 +56,36 @@ renderDots();
 goToSlide(0);
 startAuto();
 
-// ==================== TABS & ACCORDION ====================
+// ==================== CTA BUTTON SCROLL ====================
+const ctaButtons = document.querySelectorAll(".hero-actions .btn");
+ctaButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const productsSection = document.querySelector(".products-section");
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
-// Desktop Tabs
-const tabButtons = document.querySelectorAll(".tab-button");
+// ====================
 const tabPanels = document.querySelectorAll(".tab-panel");
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const tabId = e.target.getAttribute("aria-controls");
     
-    // Remove active class from all buttons and panels
     tabButtons.forEach(btn => {
       btn.classList.remove("active");
       btn.setAttribute("aria-selected", "false");
     });
     tabPanels.forEach(panel => panel.classList.remove("active"));
     
-    // Add active class to clicked button and corresponding panel
     e.target.classList.add("active");
     e.target.setAttribute("aria-selected", "true");
     document.getElementById(tabId).classList.add("active");
   });
 });
 
-// Keyboard navigation for tabs
 tabButtons.forEach((button, index) => {
   button.addEventListener("keydown", (e) => {
     let targetIndex = index;
@@ -106,7 +111,6 @@ tabButtons.forEach((button, index) => {
   });
 });
 
-// Mobile Accordion
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 accordionHeaders.forEach((header) => {
@@ -116,7 +120,6 @@ accordionHeaders.forEach((header) => {
     const content = document.getElementById(contentId);
     const isExpanded = header.getAttribute("aria-expanded") === "true";
     
-    // Close all accordion items
     accordionHeaders.forEach(h => {
       h.setAttribute("aria-expanded", "false");
       const id = h.getAttribute("aria-controls");
@@ -124,7 +127,6 @@ accordionHeaders.forEach((header) => {
       el.style.maxHeight = "0";
     });
     
-    // Open clicked item if it was closed
     if (!isExpanded) {
       header.setAttribute("aria-expanded", "true");
       content.style.maxHeight = content.scrollHeight + "px";
@@ -132,7 +134,6 @@ accordionHeaders.forEach((header) => {
   });
 });
 
-// Keyboard navigation for accordion
 accordionHeaders.forEach((header, index) => {
   header.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown") {
