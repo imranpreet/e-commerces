@@ -56,7 +56,6 @@ renderDots();
 goToSlide(0);
 startAuto();
 
-// ==================== CTA BUTTON SCROLL ====================
 const ctaButtons = document.querySelectorAll(".hero-actions .btn");
 ctaButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -67,7 +66,7 @@ ctaButtons.forEach((button) => {
   });
 });
 
-// ====================
+
 const tabPanels = document.querySelectorAll(".tab-panel");
 
 tabButtons.forEach((button) => {
